@@ -9,6 +9,7 @@ async function bootstrap() {
       'http://localhost:3001',
       'http://localhost:3002',
       'https://cars-app-ik.vercel.app/',
+      'https://car-app-backend-vf1s.onrender.com',
     ],
     methods: ['GET', 'POST'],
   });
