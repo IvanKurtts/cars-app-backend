@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Header, Param, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -6,6 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  @Header('Access-Control-Allow-Origin', '*')
   getAllCars(
     @Query('limit') limit: string,
     @Query('brand') brand: string,
